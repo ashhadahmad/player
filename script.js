@@ -1,18 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const player = new Plyr('#player');
-  window.player = player;
-  function on(selector, type, callback) {
-    document.querySelector(selector).addEventListener(type, callback, false);
-  }
-});
+let cors = "https://cors-anywhere.herokuapp.com/";
 
 function changesrc(){
   var newSourceURL = document.getElementById("url").value;
-  var video = document.getElementById("player");
+  var playerElement = document.getElementById("player");
+
   console.log(newSourceURL);
-  if(newSourceURL !== null) {
-    video.src = "https://cors-anywhere.herokuapp.com/" + newSourceURL;
-  }
+  var player = new Clappr.Player({
+    source:newSourceURL,
+    plugins: {
+      container: [ResponsiveContainer]
+    }
+  });
+  player.attachTo(playerElement);
 }
 
 document.getElementById("playbtn").addEventListener("click", changesrc);
