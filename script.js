@@ -8,7 +8,7 @@ function changesrc(){
   var player = new Clappr.Player({
     source:newSourceURL,
     plugins: {
-      container: [ResponsiveContainer]
+      container: [ResponsiveContainer, PlaybackSpeedPlugin]
     }
   });
   player.attachTo(playerElement);
