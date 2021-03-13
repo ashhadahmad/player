@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Video Player</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-responsive-container-plugin@1.0.0/dist/clappr-responsive-container-plugin.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title"> Online Video Player </h1>
+
+            <div class="columns">
+                <div class="column"></div>
+                <div class="column is-10">
+
+                    <div class="field is-grouped">
+                        <div class="control has-icons-left has-icons-right is-expanded">
+                            <input type="text" class="input is-info is-medium" id="url" placeholder="Enter URL">
+                            <span class="icon is-medium is-left">
+                <i class="fa fa-link"></i>
+              </span>
+                        </div>
+                        <p class="control">
+                            <a class="button is-info is-medium" id="playbtn">
+                                <i class="fa fa-play"></i>
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="column"></div>
+            </div>
+
+            <div class="columns">
+                <div class="column"></div>
+                <div class="column is-10" id = "player">
+                </div>
+                <div class="column"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Online Video Player</strong>. Powered by <a href="http://clappr.io/" target="_blank">Clappr</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.1/plyr.min.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
